@@ -1,0 +1,25 @@
+name: Release Firmware
+
+on:
+  workflow_dispatch:
+
+jobs:
+  release:
+
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+
+    - uses: actions/download-artifact@v4
+      with:
+        name: firmware
+        path: firmware
+
+    - uses: softprops/action-gh-release@v2
+      with:
+        tag_name: build-${{ github.run_number }}
+        name: OpenWrt MR3420 v3 Build ${{ github.run_number }}
+        files: firmware/**
