@@ -61,7 +61,7 @@ jobs:
 
     - name: Copy Config
       run: |
-        cp ../config/mr3420v3.config openwrt/.config
+        cp ../config/mr3420v3.diffconfig openwrt/.config
         cd openwrt
         make defconfig
 
