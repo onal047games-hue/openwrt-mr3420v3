@@ -1,1 +1,15 @@
+CONFIG_TARGET_ar71xx=y
+CONFIG_TARGET_ar71xx_tiny=y
 
+# Device dipilih melalui target profile resmi saat make defconfig
+
+CONFIG_PACKAGE_dnsmasq=y
+CONFIG_PACKAGE_firewall=y
+CONFIG_PACKAGE_dropbear=y
+CONFIG_PACKAGE_ppp=y
+CONFIG_PACKAGE_ppp-mod-pppoe=y
+CONFIG_PACKAGE_wpad-mini=y
+
+CONFIG_IPV6=n
+CONFIG_PACKAGE_luci=n
+CONFIG_PACKAGE_uhttpd=n
